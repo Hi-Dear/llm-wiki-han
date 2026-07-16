@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "99c1a61ebd556ae2",
+    "type": "split",
+    "children": [
+      {
+        "id": "df369573b446ab05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dedb43a37f638cea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "news-2026-07-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "news-2026-07-16"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9ae5ff916ae22a11",
+    "type": "split",
+    "children": [
+      {
+        "id": "39539cd3db19dc55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6d772db607f2efe",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "168f0e1ce731d6c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "fd8ffcf4d9a03866",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d74c40936fc4f6c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5877a9e0518e769",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e3e810acdf218eaa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "MS-SOFC 내부 개질 의 백링크"
+            }
+          },
+          {
+            "id": "1f02224c5971bfa3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "MS-SOFC 내부 개질 의 나가는 링크"
+            }
+          },
+          {
+            "id": "94053d5087a4acbe",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "2cd02e98b68a9eff",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "fa5e5564cd929872",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "MS-SOFC 내부 개질 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "dedb43a37f638cea",
+  "lastOpenFiles": [
+    "Wiki/투자/news-2026-07-16.md",
+    "news-2026-07-16.md",
+    "news-2026-07-16.md.tmp.31320.0926925dc5c7",
+    "Wiki/Log.md.tmp.30244.a8e314abb68e",
+    "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
+    "Clippings/🎯 취업 포트폴리오 v2 0 (정리본) 39ae04b2a5f981829dfac6a6fc9db7af.md",
+    "무제.md",
+    "Clippings/무제.md",
+    "Wiki/AI 에이전트/하네스 엔지니어링.md",
+    "Wiki/투자/SK하이닉스.md",
+    "Wiki/투자/AI 반도체 사이클.md",
+    "Wiki/투자/한국 증시 밸류에이션.md",
+    "Wiki/투자/아시아 증시 동향 (2026-07-14).md",
+    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md",
+    "Wiki/Log.md",
+    "Wiki/AI 에이전트/LLM Wiki 패턴.md",
+    "Clippings/Scientific Machine Learning Through Physics-Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
+    "Clippings/Physics-informed neural networks A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.md",
+    "CLAUDE.md.tmp.38140.130f1dbb5671",
+    "Wiki/Log.md.tmp.38140.4fc15810be0c",
+    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md.tmp.38140.6fd2af5e0f9c",
+    "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What’s Next - Journal of Scientific Computing.md",
+    "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
+    "CLAUDE.md.tmp.38140.8e2749625103",
+    "Wiki/Log.md.tmp.38140.09cc669142f4",
+    "CLAUDE.md.tmp.38140.76cba175b898",
+    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md.tmp.38140.4e4ea6edffd1",
+    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md.tmp.38140.4f82b91be2a7",
+    "Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
+    "Clippings/Improvement of the internal reforming of metal-supported SOFC at low temperatures.md",
+    "Clippings/美 블룸버그 세계 최고 수준 한국 주식, 여전히 ’저평가’…매력적인 투자 기회 By The Guru.md",
+    "Clippings/아시아 증시 하락 지속, 유가 급등에 인플레 우려…미국 CPI 발표 대기 By Investing.com.md",
+    "CLAUDE.md",
+    "Wiki/Home.md",
+    "Clippings/SK하이닉스 목표가 185만~420만원…AI 낙관론·피크아웃론 ’정면 충돌’ By EBN.md",
+    "하네스.md"
+  ]
+}
