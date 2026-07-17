@@ -11,10 +11,14 @@
             "id": "dedb43a37f638cea",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Wiki/투자/news-2026-07-16.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "news-2026-07-16"
             }
           }
         ]
@@ -181,22 +185,25 @@
   },
   "active": "dedb43a37f638cea",
   "lastOpenFiles": [
+    "Wiki/Log.md.tmp.31320.edce3c141af1",
+    "Wiki/투자/news-2026-07-16.md.tmp.31320.1f111229aa37",
+    "Wiki/투자/news-2026-07-16.md.tmp.31320.6240c860f045",
+    "Wiki/투자/news-2026-07-16.md.tmp.31320.a7a33db6ca3c",
+    "Wiki/투자/news-2026-07-16.md.tmp.31320.cdb1843de9ad",
+    "Wiki/투자/news-2026-07-16.md.tmp.31320.5830ed9cab59",
+    "Wiki/투자/SK하이닉스.md",
+    "Wiki/투자/news-2026-07-16.md",
     "Wiki/Log.md.tmp.31320.a7066a9e91bd",
     "Wiki/Log.md.tmp.31320.0d4e76ab682c",
     "Wiki/Home.md.tmp.31320.33b26e362b27",
     "Wiki/Home.md.tmp.31320.adf9459eb972",
     "Wiki/Home.md.tmp.31320.96177cd0d51d",
-    "Wiki/투자/news-2026-07-16.md",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.a48eccaf7d48",
     "news-2026-07-16.md",
-    "news-2026-07-16.md.tmp.31320.0926925dc5c7",
-    "Wiki/Log.md.tmp.30244.a8e314abb68e",
     "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
     "Clippings/🎯 취업 포트폴리오 v2 0 (정리본) 39ae04b2a5f981829dfac6a6fc9db7af.md",
     "무제.md",
     "Clippings/무제.md",
     "Wiki/AI 에이전트/하네스 엔지니어링.md",
-    "Wiki/투자/SK하이닉스.md",
     "Wiki/투자/AI 반도체 사이클.md",
     "Wiki/투자/한국 증시 밸류에이션.md",
     "Wiki/투자/아시아 증시 동향 (2026-07-14).md",
@@ -205,9 +212,6 @@
     "Wiki/AI 에이전트/LLM Wiki 패턴.md",
     "Clippings/Scientific Machine Learning Through Physics-Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
     "Clippings/Physics-informed neural networks A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.md",
-    "CLAUDE.md.tmp.38140.130f1dbb5671",
-    "Wiki/Log.md.tmp.38140.4fc15810be0c",
-    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md.tmp.38140.6fd2af5e0f9c",
     "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What’s Next - Journal of Scientific Computing.md",
     "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
     "Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
