@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/투자/news-2026-07-16.md",
+                "file": "Wiki/투자/SK하이닉스.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "news-2026-07-16"
+              "title": "SK하이닉스"
             }
           }
         ]
@@ -185,6 +185,11 @@
   },
   "active": "dedb43a37f638cea",
   "lastOpenFiles": [
+    "Wiki/Log.md.tmp.31320.9cb2d150e00a",
+    "Wiki/Home.md.tmp.31320.4e8a490fb7dd",
+    "Wiki/투자/news-2026-07-17.md.tmp.31320.ed8f103cf730",
+    "Wiki/투자/news-2026-07-16.md",
+    "Wiki/투자/news-2026-07-17.md",
     "Wiki/Log.md.tmp.31320.edce3c141af1",
     "Wiki/투자/news-2026-07-16.md.tmp.31320.1f111229aa37",
     "Wiki/투자/news-2026-07-16.md.tmp.31320.6240c860f045",
@@ -192,12 +197,8 @@
     "Wiki/투자/news-2026-07-16.md.tmp.31320.cdb1843de9ad",
     "Wiki/투자/news-2026-07-16.md.tmp.31320.5830ed9cab59",
     "Wiki/투자/SK하이닉스.md",
-    "Wiki/투자/news-2026-07-16.md",
     "Wiki/Log.md.tmp.31320.a7066a9e91bd",
     "Wiki/Log.md.tmp.31320.0d4e76ab682c",
-    "Wiki/Home.md.tmp.31320.33b26e362b27",
-    "Wiki/Home.md.tmp.31320.adf9459eb972",
-    "Wiki/Home.md.tmp.31320.96177cd0d51d",
     "news-2026-07-16.md",
     "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
     "Clippings/🎯 취업 포트폴리오 v2 0 (정리본) 39ae04b2a5f981829dfac6a6fc9db7af.md",
@@ -219,7 +220,6 @@
     "Clippings/美 블룸버그 세계 최고 수준 한국 주식, 여전히 ’저평가’…매력적인 투자 기회 By The Guru.md",
     "Clippings/아시아 증시 하락 지속, 유가 급등에 인플레 우려…미국 CPI 발표 대기 By Investing.com.md",
     "CLAUDE.md",
-    "Wiki/Home.md",
-    "Clippings/SK하이닉스 목표가 185만~420만원…AI 낙관론·피크아웃론 ’정면 충돌’ By EBN.md"
+    "Wiki/Home.md"
   ]
 }
