@@ -7,6 +7,14 @@
 
 ## 2026-07-24
 
+### [갱신] AFPM 열 해석 페이지 — 손실원별 정량 비중(%) 추가
+**처리한 원본**: 사용자 요청 — 기존 "손실원과 그 분포" 절에 각 손실원이 총손실 대비 몇 %를 차지하는지 정량적으로 보강. 새 원본을 수집한 것이 아니라 이미 확보한 5편 원본을 재검토
+**결정 사항**
+- `Clippings/Thermal Analysis of Axial‐Flux Permanent Magnet Motors...md` (Zhang et al. 2022) 원문 표에 36kW/5,600rpm 동작점의 부품별 손실이 W 단위로 있어, 총손실(1,579W) 대비 비중을 직접 계산해 표로 추가 — 이 동작점에서는 철손(요크+치)이 61.2%로 동손(27.2%)보다 압도적으로 큼을 확인
+- 이 수치가 "하나의 기기·하나의 동작점"에만 해당하는 스냅샷임을 명시하고, 부하·속도가 달라지면 비중이 달라질 수 있다는 점(원문에 다른 동작점 데이터 없음)을 본문에 밝혀 과잉 일반화를 방지
+- 나머지 손실원은 원문에 명확한 %가 없거나 다른 형태(온도상승 %, 절대 W)로만 보고되어 있어, 이를 "정량 사례"와 "정성적으로만 확인된 손실원"으로 구분 — 후자에는 Sahin & Vandenput(2003)의 고주파 와전류손 0.4%, 11차 공간고조파 손실 27W(자석):1W(철심) 비율, PM 4분할시 온도상승 23% 감소(손실 자체의 %가 아님을 주석으로 구분) 등을 원문 표기 그대로 인용
+- 사실(원문 수치)과 위키의 계산·해석(비중 %, 일반화 경고)을 표와 본문에서 명확히 분리해 CLAUDE.md의 "사실과 해석 구분" 원칙 준수
+
 ### [수집] AFPM(축방향 자속 영구자석 전동기) 리뷰 논문 3편
 **처리한 원본**: `Clippings/A Comprehensive Review of Axial-Flux Permanent-Magnet Machines.md` (IEEE 2014), `Clippings/A Review of Axial Flux Permanent Magnet Machine Technology.md` (IEEE 2023), `Clippings/Design and Construction of Axial-Flux Permanent Magnet Motors for Electric Propulsion Applications—A Review.md` (IEEE 2022)
 **결정 사항**
