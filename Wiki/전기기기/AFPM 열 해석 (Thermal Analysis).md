@@ -1,0 +1,95 @@
+---
+type: wiki
+topic: 전기기기
+sources:
+  - "[[Clippings/Lumped-Parameter Thermal Model for Axial Flux Permanent Magnet Machines]]"
+  - "[[Clippings/Modeling and Experimental Validation of Flow-Thermal-Coupled Lumped-Parameter Network for Axial-Flux Permanent-Magnet Motor With Oil-Immersed Cooling System]]"
+  - "[[Clippings/Thermal Analysis of Axial‐Flux Permanent Magnet Motors for Vehicles Based on Fast Two‐Way Magneto‐Thermal Coupling]]"
+  - "[[Clippings/Thermal modeling and testing of a high‐speed axial‐flux permanent‐magnet machine]]"
+  - "[[Clippings/Thermal modelling of an axial flux permanent magnet machine]]"
+updated: 2026-07-24
+---
+
+# AFPM 열 해석 (Thermal Analysis)
+
+[[AFPM (축방향 자속 영구자석 전동기)]] 개요 페이지의 "열/기계 해석" 절을 확장하는 전문 페이지. 저속 소형기(5kW)부터 초고속 플라이휠기(30kW, 16,000rpm), 대형 저속 풍력용(300kW), 최신 오일침지 냉각 EV 인휠 모터(850N·m)까지 5편의 열 해석 전용 논문을 시대순·기법별로 종합한다.
+
+## 왜 AFPM 열 해석이 RFPM보다 까다로운가
+
+- 팬케이크 형상 특유의 **반경방향 비대칭성**: 자속밀도·손실이 반경에 따라 변하므로(사이징 방정식 참조 — [[AFPM (축방향 자속 영구자석 전동기)]]) 열원 분포도 반경 방향으로 불균일 — 단순 1차원 등가회로로는 부정확
+- 반경방향 적층(라미네이션)의 열전도 이방성: 적층강판은 면내(축방향) 열전도가 면외(반경방향)보다 훨씬 높음 — 고정자 요크의 축방향/반경방향 저항을 따로 모델링해야 함 (Sahin 2013)
+- 슬롯리스/YASA처럼 백코어가 없는 구조는 열 경로 자체가 RFPM과 다름
+- 공극이 원판형이라 RFPM의 원통형 공극 대류 열전달 상관식을 그대로 쓸 수 없음 — Taylor수 기반의 별도 상관식이 필요 (아래 참조)
+
+## 해석 기법 3갈래
+
+### 1) 집중정수(Lumped-Parameter, LP) 열회로 모델
+
+가장 널리 쓰이는 방법. 기기를 유한개의 열용량·열저항·발열원 노드로 분할하고 $\Delta T = G^{-1}P$ (열전도 행렬 방정식)를 풀어 정상상태 온도를 구한다. 과도해석은 각 노드에 열용량 $C_i=c_i\rho_i V_i$를 추가해 1차 상미분방정식으로 확장.
+
+- **T-등가회로**: Sahin(2013)이 제안한 표준 방식. 원통형 요소 하나를 축방향/반경방향 독립 열류로 가정해 3-저항 T-모델로 치환 (Table I 공식). 5kW/350rpm 발전기에서 실측과 오차 없이 일치, 대류계수·방사율을 ±20~50% 흔들어도 온도 변화가 수 °C 이내로 **매우 강건**함을 민감도 분석으로 확인 — 이는 LP 모델의 파라미터 불확실성에 대한 신뢰도를 뒷받침하는 근거로 자주 인용될 만한 결과
+- **3-D LP 네트워크**: 기존 2-D 열망(반경-원주만 고려)의 오차를 줄이기 위해 축방향까지 포함한 3차원 절점망으로 확장 (Geng et al., 오일침지 냉각 YASA 모터). 평판형 도선(flat-wire) 권선의 표皮효과·근접효과로 인한 AC손 분포가 불균일해 슬롯권선을 구간별로 세분화해서 모델링
+- LP 모델의 최대 장점은 **속도**: CFD 대비 정확도는 5% 오차 이내를 유지하면서 계산시간을 5시간→10초로 단축 (약 1000배, Geng et al.), 실무 최적화·파라미터 스터디에 실질적으로 사용 가능한 유일한 옵션
+
+### 2) 자기-열 양방향 결합(Magneto-Thermal Coupling)
+
+온도가 오르면 (a) 권선 저항이 상승해 동손 증가, (b) 영구자석 잔류자속밀도 $B_r$이 감소해 역기전력·손실 재분배가 일어남 — 이 상호작용을 무시하면 저부하 설계에서도 온도를 과소평가할 위험이 있다.
+
+Zhang et al.(2022)의 56kW AFPMM 연구가 대표적: PWM 인버터 고조파에 의한 철손 증가를 **분할루프법(split-loop method)**으로 계산(기기를 반경방향으로 여러 원형 띠로 나눠 각 띠를 독립된 자기회로로 취급 — [[AFPM (축방향 자속 영구자석 전동기)]]의 Quasi-3D 개념과 동일 발상)하고, 열망 해석 결과를 다시 저항·$B_r$ 보정에 피드백하는 반복(iterative) 계산을 수행. 입력온도 허용오차 1%까지 수렴하는 데 4~7회 반복이면 충분함을 실측으로 확인.
+
+### 3) 유동-열 결합(Flow-Thermal Coupling) / CFD
+
+오일침지·수랭 등 액체 냉각에서는 유동장 자체를 풀어야 정확한 대류계수를 얻을 수 있다. Geng et al.은 압력-유량 관계식(에너지·질량 보존)으로 별도의 **유동망(flow network)**을 구성해 열망과 양방향 결합시키는 방식을 제안 — 유동망 따로, 열망 따로 푸는 기존 단방향 결합 대비 정확도를 높였다. CFD와 5% 이내로 일치하면서도 CFD 대비 계산시간이 1/1000 수준.
+
+## 대류 열전달 계수 — AFPM 고유의 난제
+
+세 논문 모두 **공극(air-gap) 대류계수** 산정을 가장 까다로운 지점으로 지목한다. RFPM용 Taylor-Couette 상관식을 그대로 못 쓰는 이유는 AFPM 공극이 원판형(반경 방향으로 속도 분포가 변함)이기 때문.
+
+- Sahin(2013): Taylor수 $Ta = Re_\delta^2 (g/r)$ 구간별 Nusselt수 상관식 사용
+  $$Nu = \begin{cases}2 & Ta<1700\\0.128\,Ta^{0.367} & 1700<Ta<10^4\\0.409\,Ta^{0.241} & 10^4<Ta<10^7\end{cases}$$
+- Zhang et al.(2022)도 동일한 3구간 Taylor수 상관식을 채택 — 두 논문이 사실상 같은 경험식에 수렴한다는 점에서 이 상관식이 AFPM 열해석의 사실상 표준으로 자리잡았음을 시사
+- Dobson(2003)은 대형 저속기(300kW, 2300rpm, 지름 860mm)에서 문헌에 마땅한 상관식이 없어 **자체 반투명 축소모형(half-size transparent model) 실험**으로 국소 열전달계수 상관식을 직접 도출: $h=(k/g)\,0.00983\,G^{-0.28}Re_\theta^{0.755}$ — 표준 상관식이 없을 때는 실측이 유일한 대안임을 보여주는 사례
+- Geng et al.의 오일침지 모델은 원형관 Dittus-Boelter형 상관식($Nu=0.023Re^{0.8}Pr^{1/3}(\mu/\mu_w)^{0.14}$)을 유압직경 기반으로 사용 — 매질이 공기가 아닌 오일이라 공극 상관식과는 별개 체계
+
+## 냉각 방식별 비교 (다섯 논문 종합)
+
+| 방식 | 대표 사례 | 특징 |
+|---|---|---|
+| 자연대류+방사 (무외부팬) | Sahin 5kW 저속기 | 저속에서는 대류가 비효율적이라 방사 비중이 무시 못할 수준. 프레임-주변 대류계수가 가장 민감한 파라미터(20% 감소 시 권선온도 +6.5°C) |
+| 강제공랭 (회전자 허브 블레이드로 자체 펌핑) | Dobson 300kW 대형 저속기 | 유량 0.5~1.0kg/s 이상에서는 유량을 더 늘려도 온도가 거의 안 내려가는 한계점 존재. **입구 공기온도가 최대 고정자 온도에 가장 큰 영향** — 배출 열풍의 재유입 차단(슈라우드)이 실질적으로 중요 |
+| 강제공랭 (감압 진공) | Sahin & Vandenput 30kW/16,000rpm 고속기 | 초고속에서는 공력손실(windage loss)이 감당 불가 수준으로 커져 100mbar까지 감압 운전. 감압은 냉각(대류)도 동시에 악화시키는 트레이드오프 — 예측 손실보다 460W 초과 발생, 이것만 없었다면 효율 91.5%→95.6% 가능했을 것으로 추정 |
+| 수랭 (자켓/워터재킷) | Zhang 56kW EV용 | 유량 1.5m/s까지는 냉각계수가 뚜렷이 개선되나 그 이후 난류 영역에서는 유량을 더 늘려도 효과 미미 — 과도상태에서는 정상상태만큼 유량 영향이 크지 않음(피크부하 짧은 시간 동안은 냉각수보다 자체 열용량이 지배적) |
+| 오일침지 (배플+실링플레이트) | Geng 850N·m YASA 인휠모터 | 성능 순위: 오일침지 > 수랭 > 강제공랭 — 같은 저부하 조건에서 강제공랭은 고정자 193°C로 열한계 초과, 수랭은 냉각수-외피 사이 물리적 격리 탓에 열전달이 느림. 오일은 고정자와 직접 광범위 접촉해 균일 냉각 가능. 오일배플판+실링플레이트 유로 설계 개선만으로 고정자 코어 67→52°C, 권선 85→63°C 저감, 최종 전류밀도 30 A/mm² 달성 (180°C 한계 기준) |
+| 히트파이프 | Dobson 300kW 대형 저속기 (제안) | 10mm 히트파이프 도입 시뮬레이션으로 최대 고정자온도 375K→345K(30K) 저감 추정 — 저속 대형기처럼 공랭 유량 확보가 구조적으로 어려운 경우의 대안으로 제시 |
+
+**공통 결론**: 저속·대형기는 유체 유동 확보 자체가 병목(그래서 히트파이프·오일침지 같은 능동적 열경로가 유효), 고속·소형기는 공력손실과 냉각의 트레이드오프(감압)가 병목, 중간 영역(EV용 수십kW급)은 액체 냉각 방식들 사이의 우열이 갈린다.
+
+## 손실원과 그 분포 (열해석의 입력값)
+
+- **동손**: 대부분의 저·중속 AFPM에서 총손실의 최대 비중. AFPM 특유의 문제로 **단부권선(end-winding) 손실 비중이 슬롯 내 권선보다 큼** (Sahin 2013) — RFPM 대비 열관리 설계에서 단부권선을 우선순위에 둬야 하는 이유
+- **평판도선(flat-wire) 권선의 AC손**: 표피효과·근접효과로 공극쪽 슬롯권선의 AC손이 안쪽보다 훨씬 커짐 (Geng et al.) — 냉각 설계도 공극쪽에 집중해야 함(오일 실링플레이트 유로를 공극측에 배치한 이유)
+- **철손**: Steinmetz 모델 기반, PWM 고조파가 있으면 반송비(carrier ratio)가 낮을수록 손실 급증 — 반송비는 스위칭소자 손실 제약으로 무한정 못 늘림 (Zhang et al.)
+- **PM 와전류손**: 고속기에서 무시 불가. 자석을 원주/반경 방향으로 분할하고 절연층을 삽입하면 저감됨 — **반경방향 분할이 원주방향 분할보다 저감 효과가 훨씬 큼**, 4분할 시 자석 온도상승 23% 감소(Zhang et al.). 축방향 분할은 AFPM 자속이 3차원이라 이론상 효과가 있어야 하나 실측 기여도는 미미
+- **회전자손(고속기 한정)**: 슬롯 존재에 의한 무부하 와전류손(치선(tooth-tip) 도입으로 저감 가능), 주요 권선 고조파(11차·13차)에 의한 부하시 와전류손, PWM 시간고조파에 의한 손실 3가지로 분류 (Sahin & Vandenput) — 자석은 도전성이 높아 와전류가 크게 유기되므로 회전자 냉각이 어려운 고속기에서는 애초에 손실을 줄이는 설계(치선, 권선 단절피치, 자석 스큐)가 냉각보다 우선
+
+## 실험 검증 정확도 스냅샷
+
+| 논문 | 검증 방식 | 정확도 |
+|---|---|---|
+| Sahin(2013), 5kW/350rpm | Pt-100·적외선 측정 | 예측이 실측보다 근소하게 높게 나옴(설계상 바람직한 보수적 방향), 3.5kW/250rpm 재현시험도 일치 |
+| Geng et al., 850N·m 인휠모터 | 열전대(TC) 다점 측정 | LPM-실측 오차 5% 이내, LPM-CFD 오차도 5% 이내 |
+| Zhang et al., 56kW/5600rpm | 열전대+적외선+무부하 역기전력(온도 추정 대체수단) | 오차율 1.5~5.9%(부품별), 권선에서 최대오차 |
+| Sahin & Vandenput, 30kW/16,000rpm | 열전대+수랭 유량계 | 예측-실측 온도차 최대 12°C |
+| Dobson, 300kW/2300rpm | (이론 모델 + 반경1/2 축소 투명모형 실험으로 유량 상관식만 검증) | 압력·유량 예측이 실험값과 10% 이내 |
+
+## 이 다섯 논문과 개요 페이지의 관계
+
+[[AFPM (축방향 자속 영구자석 전동기)]] 개요 페이지의 "열/기계 해석" 절이 인용한 사례(오일냉각 CPSR, 워터재킷 vs 직접오일냉각 등)는 2014/2022/2023 리뷰 논문이 재인용한 요약 수준 정보였다. 이번에 수집한 5편은 그 원 저자들의 1차 열해석 논문으로, 실제 계산식·상관식·실측 오차율까지 확인 가능한 더 깊은 근거를 제공한다. 특히 Sahin(2013)의 T-등가회로와 Taylor수 상관식은 이후 Zhang et al.(2022)이 거의 그대로 재사용하고 있어, 이 분야의 사실상 표준 방법론임을 확인할 수 있다.
+
+## 원본
+
+- [[Clippings/Lumped-Parameter Thermal Model for Axial Flux Permanent Magnet Machines]] (Sahin, IEEE, 2013)
+- [[Clippings/Modeling and Experimental Validation of Flow-Thermal-Coupled Lumped-Parameter Network for Axial-Flux Permanent-Magnet Motor With Oil-Immersed Cooling System]] (Geng et al., IEEE, 2025)
+- [[Clippings/Thermal Analysis of Axial‐Flux Permanent Magnet Motors for Vehicles Based on Fast Two‐Way Magneto‐Thermal Coupling]] (Zhang, Zhang, Chen, Zhong — Mathematical Problems in Engineering/Wiley, 2022)
+- [[Clippings/Thermal modeling and testing of a high‐speed axial‐flux permanent‐magnet machine]] (Sahin & Vandenput, COMPEL/Emerald, 2003)
+- [[Clippings/Thermal modelling of an axial flux permanent magnet machine]] (Dobson, Applied Thermal Engineering/Elsevier, 2003)

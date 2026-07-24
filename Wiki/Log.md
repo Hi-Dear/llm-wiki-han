@@ -5,6 +5,25 @@
 
 ---
 
+## 2026-07-24
+
+### [수집] AFPM(축방향 자속 영구자석 전동기) 리뷰 논문 3편
+**처리한 원본**: `Clippings/A Comprehensive Review of Axial-Flux Permanent-Magnet Machines.md` (IEEE 2014), `Clippings/A Review of Axial Flux Permanent Magnet Machine Technology.md` (IEEE 2023), `Clippings/Design and Construction of Axial-Flux Permanent Magnet Motors for Electric Propulsion Applications—A Review.md` (IEEE 2022)
+**결정 사항**
+- 세 논문 모두 같은 주제(AFPM)를 다루는 리뷰 논문이라 개별 페이지로 쪼개지 않고 `Wiki/전기기기/AFPM (축방향 자속 영구자석 전동기).md` 한 페이지로 종합 — 페이지 하단에 "세 리뷰의 관점 차이" 표를 두어 각 논문의 강조점(초기 종합/10년 뒤 정량 서베이/EV 응용 특화)을 구분해 사실과 출처를 추적 가능하게 함
+- 기존 위키에 "전기기기" 주제가 없어 새 폴더 생성 (기존 폴더: AI 에이전트/투자/머신러닝/에너지·연료전지와 병렬 구조)
+- 토폴로지 분류, RFPM 대비 성능 비교, 사이징 방정식, 전자기 해석 기법, 코깅토크 저감, 열/기계 해석, 재료·제조, 응용 사례(정량 수치), 계자약화, 최신 토폴로지(베어링리스·복합자속·자기기어) 순으로 구조화 — 세 논문에서 중복 서술된 부분은 하나로 합치고, 논문별 고유 수치(예: 서베이 논문의 λ·팁속도 분포, EV 논문의 YASA/TORUS 구체 설계 수치)는 그대로 보존
+- `Home.md`에 "전기기기" 섹션과 수집 현황 표 항목 추가
+
+### [수집] AFPM 열 해석(Thermal Analysis) 전문 논문 5편
+**처리한 원본**: `Clippings/Lumped-Parameter Thermal Model for Axial Flux Permanent Magnet Machines.md` (Sahin 2013), `Clippings/Modeling and Experimental Validation of Flow-Thermal-Coupled Lumped-Parameter Network...md` (Geng et al. 2025), `Clippings/Thermal Analysis of Axial‐Flux Permanent Magnet Motors for Vehicles Based on Fast Two‐Way Magneto‐Thermal Coupling.md` (Zhang et al. 2022), `Clippings/Thermal modeling and testing of a high‐speed axial‐flux permanent‐magnet machine.md` (Sahin & Vandenput 2003), `Clippings/Thermal modelling of an axial flux permanent magnet machine.md` (Dobson 2003)
+**결정 사항**
+- 기존 [[AFPM (축방향 자속 영구자석 전동기)]] 개요 페이지의 "열/기계 해석" 절은 리뷰 논문이 재인용한 요약 수준이라, 이번에 수집한 1차 열해석 논문 5편은 별도 전문 페이지 `Wiki/전기기기/AFPM 열 해석 (Thermal Analysis).md`로 분리 신설 — 개요 페이지에서 링크로 연결해 계층화 (일반 개요 → 세부 전문주제 페이지로 위키를 확장하는 패턴, [[PINN (Physics-Informed Neural Networks)]]과 유사)
+- 다섯 논문을 저속 소형기(5kW)·고속 소형기(30kW, 16000rpm)·대형 저속기(300kW)·EV용 중형기(56kW)·최신 오일침지 인휠모터(850N·m)로 스펙트럼이 다르다는 점을 살려, 개별 요약이 아니라 "해석 기법 3갈래(LP/자기열결합/유동열결합)", "공극 대류계수 상관식 비교", "냉각방식별 비교표", "손실원과 분포", "실험검증 정확도" 축으로 가로로 종합
+- Sahin(2013)의 Taylor수 기반 공극 열전달상관식을 Zhang et al.(2022)이 거의 그대로 재사용하는 것을 확인해 "사실상 표준 방법론"이라는 해석을 종합 섹션에 추가 — 이는 원본 어디에도 명시적으로 서술되지 않은, 두 논문을 대조해야만 드러나는 위키 고유의 종합적 통찰이므로 사실(각 논문의 기술)과 분리해 명확히 표시
+- `Wiki/전기기기/AFPM (축방향 자속 영구자석 전동기).md`의 "열/기계 해석" 절에 새 페이지로의 링크 추가
+- `Home.md`에 신규 페이지 항목 및 수집 현황 표 추가
+
 ## 2026-07-17 (파일명 KST 정정)
 
 ### [수정] news-2026-07-16.md → news-2026-07-17.md 파일명 변경
