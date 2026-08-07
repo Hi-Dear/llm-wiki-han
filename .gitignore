@@ -1,3 +1,7 @@
 .claude/settings.local.json
 Clippings/.claude/settings.local.json
 scripts/auto_pull.log
+
+# 옵시디언 UI 상태(열린 탭·패널 배치). 앱을 켜기만 해도 바뀌어 auto_pull을 막으므로 추적 제외.
+# 지식 자산이 아닌 로컬 화면 상태이며, 파일 자체는 볼트에 그대로 남는다.
+.obsidian/workspace.json
