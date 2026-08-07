@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-08-08 02:30 (Plan 모드 — 사용자 요청)
+
+### [갱신] 4-Step 투자 대시보드.md — 웹(GitHub Pages) 버전 추가
+**처리한 원본**: 사용자 요청 — Notion의 UX 한계(디자인 자유도·모바일 반응성)를 논의한 끝에, Notion은 그대로 두고 별도의 웹 버전을 새로 만들어달라는 요청
+**결정 사항**
+- `docs/` 폴더에 빌드 도구 없는 순수 HTML/CSS/JS로 정적 대시보드 작성(`index.html`+`assets/style.css`+`assets/app.js`+`data/dashboard.json`). "유지보수 부담 최소화"가 웹을 선택한 핵심 논거였으므로 프레임워크·번들러 없이 패치할 의존성이 없는 구조를 택함
+- dataviz 스킬 가이드에 따라 상태(과열/중립/저평가) 팔레트는 아이콘+라벨을 항상 병기(색상 단독 의존 금지), RSI 과매수(≥70)/과매도(≤30)를 시각 강조, 라이트/다크 모드 대응
+- claude-in-chrome으로 로컬 정적 서버에 시드 데이터·샘플 데이터를 띄워 렌더링·필터·정렬·상태 배지를 직접 확인 후 진행(빈 값 상태에서 레이아웃이 깨지지 않는지도 확인)
+- 새 클라우드 루틴 "4-Step 투자 대시보드 갱신 (웹)"을 Notion용 루틴과 완전히 분리해서 생성(매일 KST 08:30경, `docs/data/dashboard.json`만 갱신·커밋·푸시, Notion·Wiki·HTML/CSS/JS는 건드리지 않도록 금지 사항 명시). 두 루틴이 같은 데이터를 중복 리서치하는 트레이드오프는 감수하기로 함(사용자와 합의)
+- GitHub Pages 배포 시도 중 저장소가 Private이라 무료 플랜에서 Pages가 막히는 것을 발견 → 사용자에게 옵션(저장소를 Public 전환 / 별도 public 저장소로 미러링 / Vercel·Netlify로 전환) 제시, 사용자가 Public 전환을 선택. 전환 전 시크릿·API 키·비밀번호 패턴을 저장소 전체에서 grep해 없음을 확인한 뒤 `gh repo edit --visibility public`으로 전환하고 Pages를 활성화(`gh api repos/.../pages`, source: master `/docs`)
+- 배포 URL(https://hi-dear.github.io/llm-wiki-han/)이 실제로 뜨는지 curl 폴링 + claude-in-chrome 스크린샷으로 확인
+- 이 위키 페이지에 웹 링크·구조·운영방식(웹 루틴 08:30 vs Notion 루틴 08:15, 두 파이프라인 독립)을 반영, sources에 배포 URL 추가, updated 날짜 갱신
+- `Wiki/Home.md`는 이번 갱신으로 별도 반영할 새 페이지가 없어(기존 4-Step 항목 설명만 갱신) 색인 문구는 그대로 둠
+
 ## 2026-08-07 23:30 (Plan 모드 — 사용자 요청)
 
 ### [수집] 4-Step 투자 대시보드.md 신규 생성 + Notion 대시보드 구축
