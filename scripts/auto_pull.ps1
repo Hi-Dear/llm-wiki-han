@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $repo = 'C:\06_Project_Han'
 $logFile = Join-Path $repo 'scripts\auto_pull.log'
 
