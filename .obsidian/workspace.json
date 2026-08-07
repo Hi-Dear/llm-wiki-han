@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/투자/SK하이닉스.md",
+                "file": "Wiki/투자/news-2026-08-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SK하이닉스"
+              "title": "news-2026-08-07"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "파일 탐색기"
@@ -78,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 392.5
   },
   "right": {
     "id": "d74c40936fc4f6c5",
@@ -185,41 +187,40 @@
   },
   "active": "dedb43a37f638cea",
   "lastOpenFiles": [
-    "Wiki/Log.md.tmp.31320.9cb2d150e00a",
-    "Wiki/Home.md.tmp.31320.4e8a490fb7dd",
-    "Wiki/투자/news-2026-07-17.md.tmp.31320.ed8f103cf730",
-    "Wiki/투자/news-2026-07-16.md",
-    "Wiki/투자/news-2026-07-17.md",
-    "Wiki/Log.md.tmp.31320.edce3c141af1",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.1f111229aa37",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.6240c860f045",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.a7a33db6ca3c",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.cdb1843de9ad",
-    "Wiki/투자/news-2026-07-16.md.tmp.31320.5830ed9cab59",
-    "Wiki/투자/SK하이닉스.md",
-    "Wiki/Log.md.tmp.31320.a7066a9e91bd",
-    "Wiki/Log.md.tmp.31320.0d4e76ab682c",
-    "news-2026-07-16.md",
-    "Wiki/에너지·연료전지/MS-SOFC 내부 개질.md",
-    "Clippings/🎯 취업 포트폴리오 v2 0 (정리본) 39ae04b2a5f981829dfac6a6fc9db7af.md",
-    "무제.md",
-    "Clippings/무제.md",
-    "Wiki/AI 에이전트/하네스 엔지니어링.md",
-    "Wiki/투자/AI 반도체 사이클.md",
-    "Wiki/투자/한국 증시 밸류에이션.md",
-    "Wiki/투자/아시아 증시 동향 (2026-07-14).md",
-    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md",
-    "Wiki/Log.md",
-    "Wiki/AI 에이전트/LLM Wiki 패턴.md",
-    "Clippings/Scientific Machine Learning Through Physics-Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
-    "Clippings/Physics-informed neural networks A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.md",
-    "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What’s Next - Journal of Scientific Computing.md",
-    "Clippings/Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
-    "Scientific Machine Learning Through Physics–Informed Neural Networks Where we are and What's Next - Journal of Scientific Computing.md",
-    "Clippings/Improvement of the internal reforming of metal-supported SOFC at low temperatures.md",
-    "Clippings/美 블룸버그 세계 최고 수준 한국 주식, 여전히 ’저평가’…매력적인 투자 기회 By The Guru.md",
-    "Clippings/아시아 증시 하락 지속, 유가 급등에 인플레 우려…미국 CPI 발표 대기 By Investing.com.md",
+    "Wiki/전기기기/AFPM 열 해석 (Thermal Analysis).md",
+    "~$AFPM_열해석_발표.pptx",
+    "AFPM_열해석_발표.pptx",
+    "Wiki/전기기기/AFPM 열등가회로 (SSDR 모델 적용).md",
+    "Clippings/Lumped-Parameter Thermal Model for Axial Flux Permanent Magnet Machines.md",
+    "Wiki/전기기기/AFPM (축방향 자속 영구자석 전동기).md",
+    "Wiki/Log.md.tmp.28408.06535db2325e",
+    "Wiki/Home.md.tmp.28408.06c32c3abaf6",
+    "Wiki/전기기기/AFPM 열등가회로 (SSDR 모델 적용).md.tmp.28408.36cefd6007ee",
+    "Wiki/Log.md.tmp.28408.43936e6cf348",
+    "Wiki/전기기기/AFPM 열 해석 (Thermal Analysis).md.tmp.28408.052866f05fe6",
+    "Wiki/전기기기/AFPM 열 해석 (Thermal Analysis).md.tmp.28408.e5e316260e08",
+    "Wiki/Log.md.tmp.28408.7def52cc50e8",
+    "Wiki/전기기기/AFPM 열 해석 (Thermal Analysis).md.tmp.28408.526161ff17dc",
+    "Wiki/투자/news-2026-07-24.md",
+    "Wiki/투자/news-2026-07-23.md",
+    "Wiki/투자/news-2026-07-22.md",
+    "Wiki/투자/news-2026-07-21.md",
+    "Wiki/투자/news-2026-07-20.md",
+    "Wiki/투자/news-2026-07-19.md",
+    "Wiki/투자/news-2026-07-18.md",
+    "Clippings/Modeling and Experimental Validation of Flow-Thermal-Coupled Lumped-Parameter Network for Axial-Flux Permanent-Magnet Motor With Oil-Immersed Cooling System.md",
+    "Clippings/Thermal Analysis of Axial‐Flux Permanent Magnet Motors for Vehicles Based on Fast Two‐Way Magneto‐Thermal Coupling.md",
+    "Clippings/A 3D Dynamic Lumped Parameter Thermal Network of Air-Cooled YASA Axial Flux Permanent Magnet Synchronous Machine.md",
+    "Clippings/Thermal modelling of an axial flux permanent magnet machine.md",
+    "Clippings/Thermal modeling and testing of a high‐speed axial‐flux permanent‐magnet machine.md",
+    "Clippings/Design and Construction of Axial-Flux Permanent Magnet Motors for Electric Propulsion Applications—A Review.md",
+    "Clippings/A Review of Axial Flux Permanent Magnet Machine Technology.md",
+    "Clippings/A Review of Axial-Flux Permanent-Magnet Motors Topological Structures, Design, Optimization and Control Techniques.md",
+    "Clippings/A Comprehensive Review of Axial-Flux Permanent-Magnet Machines.md",
     "CLAUDE.md",
-    "Wiki/Home.md"
+    "Wiki/머신러닝/PINN (Physics-Informed Neural Networks).md",
+    "Clippings/Physics-informed neural networks A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.md",
+    "Wiki/AI 에이전트/LLM Wiki 패턴.md",
+    "Wiki/투자/SK하이닉스.md"
   ]
 }
