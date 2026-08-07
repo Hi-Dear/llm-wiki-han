@@ -1,0 +1,30 @@
+{
+  "updatedAt": null,
+  "macro": [
+    { "indicator": "버핏지수", "sub": "미국 시가총액 / GDP", "value": null, "interpretation": null, "source": null, "asOf": null },
+    { "indicator": "쉴러 PER", "sub": "CAPE Ratio", "value": null, "interpretation": null, "source": null, "asOf": null },
+    { "indicator": "공포·탐욕 지수", "sub": "CNN Fear & Greed Index", "value": null, "interpretation": null, "source": null, "asOf": null }
+  ],
+  "stocks": [
+    { "name": "Apple", "ticker": "AAPL", "market": "미국" },
+    { "name": "Microsoft", "ticker": "MSFT", "market": "미국" },
+    { "name": "Alphabet", "ticker": "GOOGL", "market": "미국" },
+    { "name": "Amazon", "ticker": "AMZN", "market": "미국" },
+    { "name": "Nvidia", "ticker": "NVDA", "market": "미국" },
+    { "name": "Meta", "ticker": "META", "market": "미국" },
+    { "name": "Tesla", "ticker": "TSLA", "market": "미국" },
+    { "name": "Broadcom", "ticker": "AVGO", "market": "미국" },
+    { "name": "Netflix", "ticker": "NFLX", "market": "미국" },
+    { "name": "JPMorgan", "ticker": "JPM", "market": "미국" },
+    { "name": "삼성전자", "ticker": "005930", "market": "국내" },
+    { "name": "SK하이닉스", "ticker": "000660", "market": "국내" },
+    { "name": "LG에너지솔루션", "ticker": "373220", "market": "국내" },
+    { "name": "삼성바이오로직스", "ticker": "207940", "market": "국내" },
+    { "name": "현대차", "ticker": "005380", "market": "국내" },
+    { "name": "기아", "ticker": "000270", "market": "국내" },
+    { "name": "NAVER", "ticker": "035420", "market": "국내" },
+    { "name": "셀트리온", "ticker": "068270", "market": "국내" },
+    { "name": "POSCO홀딩스", "ticker": "005490", "market": "국내" },
+    { "name": "KB금융", "ticker": "105560", "market": "국내" }
+  ]
+}
